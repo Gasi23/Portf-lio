@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Meu<span>Portfólio</span></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="no-shadow">
+            <div class="container">
+                <h1>Inovação e Criatividade</h1>
+                <p>Transformo ideias em experiências visuais inesquecíveis. Vamos construir algo incrível juntos.</p>
+                <a href="#projetos" class="cta-btn">Explorar Projetos</a>
+            </div>
+        </section>
+        <section id="sobre" class="content-section">
+            <div class="container">
+                <div class="profile-placeholder" data-aos="fade-up"></div>
+                <h2>Sobre Mim</h2>
+                <p>Sou uma desenvolvedora apaixonada por criar experiências digitais incríveis...</p>
+            </div>
+        </section>
+        <section id="projetos" class="content-section">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="grid">
+                    <div class="card" data-aos="fade-up">
+                        <h3>Projeto Integrador</h3>
+                        <p>Uma solução em educação que conecta sonhos e faz uma análise de perfil, conectando oportunidades.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <h3>RehidraTex</h3>
+                        <p>Unindo enzimas, Ozônio, Reciclagem de Água e Software em um Processo Inovador para Lavanderias de Jeans.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up">
+                        <h3>SustentAção</h3>
+                        <p>Desenvolvimento do aplicativo "ID Caruaruense".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="content-section">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Quer colaborar em algo incrível? Estou à disposição.</p>
+                <form id="contact-form" action="https://formspree.io/f/{SEU_ID}" method="POST">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit" class="cta-btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gabriely. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+    <div id="particles-js"></div>
+</body>
+</html>
