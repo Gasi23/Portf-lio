@@ -6,10 +6,12 @@
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <div id="particles-js"></div>
+    <header id="navbar">
         <div class="container">
             <div class="logo">Meu<span>Portfólio</span></div>
             <nav>
@@ -25,17 +27,52 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h1>Inovação e Criatividade</h1>
-                <p>Transformo ideias em experiências visuais inesquecíveis. Vamos construir algo incrível juntos.</p>
-                <a href="#projetos" class="cta-btn">Explorar Projetos</a>
+                <h1>Desenvolvedora Front-End focada em criar interfaces modernas, responsivas e intuitivas.</h1>
+                <p>Transformo ideias em experiências digitais bonitas, funcionais e acessíveis usando React, JavaScript e CSS.</p>
+                <div class="hero-btns">
+                    <a href="#projetos" class="cta-btn">Ver Projetos</a>
+                    <a href="seu-curriculo.pdf" class="cta-btn btn-secondary" target="_blank">Baixar Currículo</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/seuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
 
         <section id="sobre" class="content-section">
             <div class="container">
-                <div class="profile-image"></div> <!-- Aqui a imagem será exibida -->
                 <h2>Sobre Mim</h2>
-                <p>Sou uma desenvolvedora apaixonada por criar experiências digitais incríveis...</p>
+                <p>Sou desenvolvedora front-end apaixonada por criar interfaces modernas e experiências intuitivas. Gosto de transformar ideias em layouts responsivos, acessíveis e visualmente agradáveis. Tenho grande facilidade para aprender novas tecnologias e um olhar atento para design e organização visual.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <div class="container">
+                <h2>Minhas Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-card">
+                            <i class="fas fa-code"></i>
+                            <h3>Front-End</h3>
+                            <p>HTML, CSS, JavaScript, React, Tailwind</p>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-card">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>UI/UX</h3>
+                            <p>Responsividade, Acessibilidade, Figma, Prototipação, Design System</p>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-card">
+                            <i class="fas fa-tools"></i>
+                            <h3>Ferramentas</h3>
+                            <p>Git, GitHub, VS Code, Scrum, Kanban</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -47,17 +84,34 @@
                         <h3>RehidraTex</h3>
                         <img src="img/rehidratex.jpeg" alt="RehidraTex" class="project-img">
                         <p>Unindo enzimas, Ozônio, Reciclagem de Água e Software em um Processo Inovador para Lavanderias de Jeans.</p>
+                        <div class="highlights"><span>Responsivo</span><span>Design Moderno</span></div>
+                        <div class="tech-stack"><span>JS</span><span>HTML</span><span>CSS</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
                     <div class="card">
                         <h3>SustentAção</h3>
                         <img src="img/sustentacao.jpeg" alt="SustentAção" class="project-img">
                         <p>Desenvolvimento do aplicativo "ID Caruaruense".</p>
+                        <div class="highlights"><span>Interface Intuitiva</span><span>React Native</span></div>
+                        <div class="tech-stack"><span>React</span><span>UX Design</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
-                    <!-- Novo projeto integrador -->
                     <div class="card">
                         <h3>Projeto Integrador</h3>
                         <img src="img/projeto.jpeg" alt="Projeto Integrador" class="project-img">
                         <p>Solução em educação, conecta sonhos e faz análise de perfil para gerar conexão com oportunidades.</p>
+                        <div class="highlights"><span>Inovação Social</span><span>Organização Visual</span></div>
+                        <div class="tech-stack"><span>Node.js</span><span>React</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,16 +121,14 @@
             <div class="container">
                 <h2>Contato</h2>
                 <p>Quer colaborar em algo incrível? Estou à disposição.</p>
-                <a href="mailto:gabrielyv960@gmail.com" class="cta-btn">Entre em Contato</a>
+                <form id="contact-form" action="https://formspree.io/f/{SEU_ID}" method="POST">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit" class="cta-btn">Enviar Mensagem</button>
+                </form>
             </div>
         </section>
-
-        <form id="contact-form" action="https://formspree.io/f/{SEU_ID}" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu Email" required>
-            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="cta-btn">Enviar</button>
-        </form>        
     </main>
 
     <footer>
