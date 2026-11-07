@@ -1,8 +1,3 @@
-// Partículas de fundo (usando particles.js)
-particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('Particles.js carregado!');
-});
-
 // Menu dinâmico que muda ao rolar a página
 window.addEventListener('scroll', () => {
     const header = document.getElementById('navbar');
